@@ -1,0 +1,5 @@
+lines = readlines("input.txt")
+module_masses = map(x -> parse(Float64, x), lines)
+fuel_requirements = map(x -> floor(x / 3) - 2, module_masses)
+total_fuel_requirement = convert(Int64, sum(fuel_requirements))
+println(total_fuel_requirement)
