@@ -15,15 +15,13 @@ while true
         program[program[i+3] + 1] = program[program[i+1] + 1] * program[program[i+2] + 1]
     elseif program[i] == 99
         # Halt
-        println("It's good!")
         break
     else
-        println("It's not good!")
+        println("Unexpected opcode!")
         throw(ErrorException)
     end
-    
-    println(program[1])
+
     global i += 4
 end
 
-println(program)
+println(program[1])
