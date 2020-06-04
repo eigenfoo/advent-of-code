@@ -80,8 +80,6 @@ last computer caught fire. To do this, before running the program, replace posit
 with the value 12 and replace position 2 with the value 2. What value is left at
 position 0 after the program halts?
 
-Your puzzle answer was 12490719.
-     
 --- Part Two ---
 
 "Good, the new computer seems to be working correctly! Keep it nearby during this
@@ -125,5 +123,3 @@ memory from a previous attempt.
 Find the input noun and verb that cause the program to produce the output 19690720.
 What is 100 * noun + verb? (For example, if noun=12 and verb=2, the answer would be
 1202.)
-
-Your puzzle answer was 2003.
