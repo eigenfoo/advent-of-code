@@ -1,5 +1,3 @@
-using Debugger
-
 lines = readlines("input.txt")
 
 regex = r"(\d*)-(\d*) (\w): (\w*)"
