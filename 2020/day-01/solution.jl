@@ -22,5 +22,3 @@ for i in 1:numexpenses
         end
     end
 end
-
-
