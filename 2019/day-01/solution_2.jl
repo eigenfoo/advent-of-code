@@ -3,7 +3,7 @@ masses = map(x -> parse(Float64, x), lines)
 
 total_fuel_requirement = 0
 
-for i in 1:size(masses)[1]
+for i = 1:size(masses)[1]
     fuel_requirement = floor(masses[i] / 3) - 2
 
     while fuel_requirement > 0

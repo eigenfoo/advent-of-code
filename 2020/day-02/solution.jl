@@ -34,10 +34,7 @@ for captures in linecaptures
     requiredcharacter = first(captures[3])
     password = captures[4]
 
-    if xor(
-        password[minindex] == requiredcharacter,
-        password[maxindex] == requiredcharacter
-    )
+    if xor(password[minindex] == requiredcharacter, password[maxindex] == requiredcharacter)
         global numvalid += 1
     else
         global numinvalid += 1
@@ -47,4 +44,3 @@ end
 println()
 println("Valid passwords: ", numvalid)
 println("Invalid passwords: ", numinvalid)
-
