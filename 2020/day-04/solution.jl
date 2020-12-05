@@ -40,7 +40,7 @@ end
 
 for passport in passports
     records = Dict(record[1:3] => record[5:end] for record in split(passport))
-    if issubset(requiredfields, Set(keys(records)))
+    if issubset(requiredfields, Set(keys(records)))  # Avoid KeyErrors
         if (
             (1920 <= parse(Int, records["byr"]) <= 2002) &
             (2010 <= parse(Int, records["iyr"]) <= 2020) &
@@ -48,7 +48,7 @@ for passport in passports
             hgtmask(records["hgt"]) &
             hclmask(records["hcl"]) &
             (records["ecl"] in validecls) &
-            (length(records["pid"]) == 9)  # This doesn't check if it's numeric
+            (length(records["pid"]) == 9)  # This doesn't check if it's numeric lol
         )
             global numvalid += 1
         end
