@@ -17,5 +17,6 @@ println(maxseatid)
 
 # ---
 
-allseatids = Set(1:maxseatid)
-println(setdiff(allseatids, seatids))  # Remove front and back seats by eye lol
+minseatid = minimum(seatids)
+allseatids = Set(minseatid:maxseatid)
+println(setdiff(allseatids, seatids))
