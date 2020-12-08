@@ -47,17 +47,17 @@ println(
 
 # ---
 
-queue = [(shinygold_bag_index, 1)]  # Vertex, multipler
-totbags = 0
+queue = [(shinygold_bag_index, 1)]  # Vertex index, multipler
+totalbags = 0
 
 while length(queue) != 0
     bagindex, multiplier = popfirst!(queue)
     neighbors_ = neighbors(graph, bagindex)
     for neighbor in neighbors_
         # Oddly indexed by [to, from] and not [from, to]
-        global totbags += multiplier * graph.weights[neighbor, bagindex]
+        global totalbags += multiplier * graph.weights[neighbor, bagindex]
         push!(queue, (neighbor, multiplier * graph.weights[neighbor, bagindex]))
     end
 end
 
-println(totbags)
+println(totalbags)
