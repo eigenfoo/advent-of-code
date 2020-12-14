@@ -23,7 +23,7 @@ for line in lines
     end
 end
 
-println(sum(values(memory)))
+memory |> values |> sum |> println
 
 # ---
 
@@ -58,4 +58,4 @@ for line in lines
     end
 end
 
-println(sum(values(memory)))
+memory |> values |> sum |> println
