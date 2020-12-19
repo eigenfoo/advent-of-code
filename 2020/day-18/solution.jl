@@ -48,7 +48,6 @@ function newevaluate(expression)
         # Find the first pair of parentheses and evaluate that first
         closeindex = findfirst(')', expression)
         openindex = findlast('(', expression[1:closeindex])
-        @bp
         newevaluate(string(
             expression[1:openindex-1],
             newevaluate(expression[openindex+1:closeindex-1]),
